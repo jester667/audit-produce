@@ -13,7 +13,7 @@ public class AuditProducerImpl implements AuditProducer {
     private final KafkaTemplate<String, String> kafkaTemplate;
     private final JacksonUtilService jacksonUtilService;
     @Value("${spring.kafka.producer.topic}")
-    private final String topic;
+    private String topic;
 
     @Override
     public void produceMessage(AuditActionDto message) {
